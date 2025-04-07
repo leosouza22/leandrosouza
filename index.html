@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Futuristic Resume - Leandro</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --bg: #0f0f1a;
+      --accent: #5eead4;
+      --text: #f8fafc;
+      --card-bg: #1f1f2e;
+      --hover: #0f766e;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      overflow-x: hidden;
+    }
+
+    header {
+      padding: 2rem;
+      background: linear-gradient(120deg, #0f766e, #0e7490);
+      text-align: center;
+      box-shadow: 0 0 10px #000;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    header p {
+      margin-top: 0.5rem;
+      color: #d1d5db;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    nav button {
+      background: var(--accent);
+      color: var(--bg);
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    nav button:hover {
+      background: var(--hover);
+      color: var(--text);
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 2rem;
+    }
+
+    .section {
+      background: var(--card-bg);
+      padding: 1.5rem;
+      border-radius: 10px;
+      margin-bottom: 2rem;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+    }
+
+    .section h2 {
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 0.75rem;
+    }
+
+    .skill {
+      background: #334155;
+      padding: 0.75rem;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .video-container {
+      margin-top: 2rem;
+      text-align: center;
+    }
+
+    .video-container video {
+      width: 100%;
+      border-radius: 10px;
+      max-height: 500px;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      background: #0f172a;
+      color: #64748b;
+    }
+
+    /* Icons */
+    .icons {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 1rem;
+      font-size: 1.5rem;
+    }
+
+    .call-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 18px;
+    color: white;
+    background: #0f766e;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+
+.call-button:hover {
+    background: #0e7490;
+}
+
+    .profile-pic {
+    width: 120px;  /* Ajuste o tamanho da foto */
+    height: 120px;
+    border-radius: 50%; /* Torna a imagem redonda */
+    object-fit: cover; /* Mantém a proporção correta */
+    border: 3px solid var(--accent); /* Borda para destacar */
+    display: block;
+    margin: 0 auto 1rem; /* Centraliza e adiciona espaçamento abaixo */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2); /* Efeito sutil de brilho */
+}
+
+    .icons span {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="https://i.ibb.co/JWdZqR6M/IMG-20250404-WA0012.jpg" alt="Minha Foto" class="profile-pic">
+    <a href="tel:+5518996384171" class="call-button">📞 Ligar para mim</a>
+    <a href="https://wa.me/5518996384171" class="call-button">📱 WhatsApp</a>
+    <h1>Leandro de Souza Santos</h1>
+    <p>Rua Acre 379, Avanhandava-SP, Brazil | +55 18 99638-4171 | lelehsantos222@gmail.com</p>
+    <nav>
+      <button onclick="toggleDark()"><i class="fas fa-moon"></i> Theme</button>
+      <button onclick="toggleLang()"><i class="fas fa-language"></i> Language</button>
+    </nav>
+  </header>
+  <div class="container">
+    <div class="section">
+      <h2 id="summaryTitle">Professional Summary</h2>
+      <p id="summaryText">Dedicated and adaptable professional seeking seasonal job opportunities in the United States to gain international experience and contribute with my strong work ethic...</p>
+    </div>
+    <div class="section">
+      <h2 id="experienceTitle">Work Experience</h2>
+      <ul id="experienceList">
+        <li><strong>Auxiliary Mechanic</strong>: Assisted in repairs, learned troubleshooting, and kept workspace organized.</li>
+        <li><strong>Logistics Assistant</strong>: Supported inventory, deliveries, and safe equipment use.</li>
+        <li><strong>Real Estate Agent</strong>: Helped clients buy properties, negotiated deals, and provided service.</li>
+      </ul>
+    </div>
+    <div class="section">
+      <h2 id="educationTitle">Education</h2>
+      <p id="educationText">High School Diploma - Maria Eunice Martins Ferreira (2018)</p>
+    </div>
+    <div class="section">
+      <h2 id="skillsTitle">Skills</h2>
+      <div class="skills" id="skillsList">
+        <div class="skill">Teamwork & Collaboration</div>
+        <div class="skill">Organization</div>
+        <div class="skill">Customer Service</div>
+        <div class="skill">Physical Endurance</div>
+        <div class="skill">Spanish Fluency</div>
+        <div class="skill">Intermediate English</div>
+      </div>
+    </div>
+    <div class="section">
+      <h2 id="coverTitle">Cover Letter</h2>
+      <p id="coverText">Dear Hiring Manager, I do not drink or smoke, I have no criminal record, and I am always seeking opportunities to grow...</p>
+      <div class="icons">
+        <span><i class="fas fa-smoking-ban"></i> Non-Smoker</span>
+        <span><i class="fas fa-wine-bottle"></i> Non-Drinker</span>
+        <span><i class="fas fa-passport"></i> Passport Ready</span>
+      </div>
+    </div>
+
+  <div class="footer">
+    &copy; 2025 Leandro de Souza Santos. All rights reserved.
+  </div>
+  <script>
+    function toggleDark() {
+      const root = document.documentElement;
+      if (root.style.getPropertyValue('--bg') === '#0f0f1a') {
+        root.style.setProperty('--bg', '#f8fafc');
+        root.style.setProperty('--text', '#0f0f1a');
+        root.style.setProperty('--card-bg', '#e2e8f0');
+      } else {
+        root.style.setProperty('--bg', '#0f0f1a');
+        root.style.setProperty('--text', '#f8fafc');
+        root.style.setProperty('--card-bg', '#1f1f2e');
+      }
+    }
+
+    function toggleLang() {
+      const lang = document.documentElement.lang;
+      if (lang === 'en') {
+        document.documentElement.lang = 'es';
+        document.getElementById('summaryTitle').innerText = 'Resumen Profesional';
+        document.getElementById('summaryText').innerText = 'Profesional dedicado y adaptable en busca de oportunidades estacionales en los Estados Unidos...';
+        document.getElementById('experienceTitle').innerText = 'Experiencia Laboral';
+        document.getElementById('educationTitle').innerText = 'Educación';
+        document.getElementById('educationText').innerText = 'Diploma de Secundaria - Maria Eunice Martins Ferreira (2018)';
+        document.getElementById('skillsTitle').innerText = 'Habilidades';
+        document.getElementById('coverTitle').innerText = 'Carta de Presentación';
+        document.getElementById('coverText').innerText = 'Estimado reclutador, no bebo ni fumo, no tengo antecedentes penales y siempre busco crecer...';
+        document.getElementById('videoTitle').innerText = 'Presentación en Video';
+      } else {
+        document.documentElement.lang = 'en';
+        document.getElementById('summaryTitle').innerText = 'Professional Summary';
+        document.getElementById('summaryText').innerText = 'Dedicated and adaptable professional seeking seasonal job opportunities in the United States...';
+        document.getElementById('experienceTitle').innerText = 'Work Experience';
+        document.getElementById('educationTitle').innerText = 'Education';
+        document.getElementById('educationText').innerText = 'High School Diploma - Maria Eunice Martins Ferreira (2018)';
+        document.getElementById('skillsTitle').innerText = 'Skills';
+        document.getElementById('coverTitle').innerText = 'Cover Letter';
+        document.getElementById('coverText').innerText = 'Dear Hiring Manager, I do not drink or smoke, I have no criminal record...';
+        document.getElementById('videoTitle').innerText = 'Video Presentation';
+      }
+    }
+  </script>
+</body>
+</html>
